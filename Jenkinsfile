@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-node("siva"){
+node{
 echo "Hello Jenkins"
 echo "sambasiva"
 echo "sambasiva Narne"
