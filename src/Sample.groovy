@@ -12,8 +12,11 @@ echo "Service url is : Values inserted in map"+envText.PFDC_EPM_SERVICE_UTL
 
 	echo "Service url is after"
 	
+	def mycfg_file = 'src/constants.properties'
+	
 configFileProvider(
-        [configFile(fileId: 'my-managed-file', targetLocation: 'src/constants.properties', variable: 'job_settings')]) {
+        [configFile(fileId: 'mycfg_file', variable: 'PACKER_OPTIONS')]) {
+		sh "cat ${env.PACKER_OPTIONS}"
         load 'src/constants.properties'
 		}
 		
