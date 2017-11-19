@@ -1,0 +1,6 @@
+{
+"release":"pfdc_18.2"
+"env":"tomcat"
+"releaseVersion":"18.2"
+"purge":true
+}
