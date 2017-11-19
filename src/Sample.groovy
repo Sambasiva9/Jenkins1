@@ -7,7 +7,7 @@ def envText = new groovy.json.JsonSlurper().parseText(envFile)
 
 valueMap.put("url", envText.PFDC_EPM_SERVICE_UTL)
 
-echo "Service url is :"+envText.PFDC_EPM_SERVICE_UTL
+echo "Service url is : Values inserted in map"
 }
 
 return this;
