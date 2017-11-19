@@ -13,8 +13,8 @@ echo "Service url is : Values inserted in map"+envText.PFDC_EPM_SERVICE_UTL
 	echo "Service url is after"
 	
 configFileProvider(
-        [configFile(fileId: 'my-managed-file', targetLocation: '/src/constants.properties', variable: 'job_settings')]) {
-        load '/path/to/job_settings_dir/my-managed-file'
+        [configFile(fileId: 'my-managed-file', targetLocation: 'src/constants.properties', variable: 'job_settings')]) {
+        load 'src/constants.properties'
 		}
 		
 		echo "Service url is after - 1"
