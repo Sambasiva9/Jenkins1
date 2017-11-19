@@ -12,7 +12,9 @@ echo "Service url is : Values inserted in map"+envText.PFDC_EPM_SERVICE_UTL
 
 	echo "Service url is after"
 	
-	
+	 stage('configFile Plugin') {
+	  checkout scm
+
 	def mycfg_file = 'src/constants.properties'
 	
 configFileProvider(
@@ -20,7 +22,7 @@ configFileProvider(
 		sh "cat ${env.PACKER_OPTIONS}"
        
 		}
-		
+		}
 		
 		echo "Service url is after - 1"
 		
