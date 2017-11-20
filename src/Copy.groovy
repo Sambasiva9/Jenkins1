@@ -31,5 +31,24 @@ def fileCopyClosure = {
 }
 directory.eachFileRecurse(fileCopyClosure) 
 
+ stage('configFile Plugin') {
+	  checkout scm
+
+	def mycfg_file = 'src/constants.properties'
+	
+	
+configFileProvider(
+        [configFile(fileId: 'global-settings', targetLocation: 'src/constants.properties', variable: 'PACKER_OPTIONS')]) {
+		sh "cat ${env.PACKER_OPTIONS}"
+       
+		}
+		}
+		
+		echo "Service url is after - 1"
+		
+def props = readProperties  file:'src/constants.properties'
+def Var1= props['pfdc_epam_service_rul']
+echo "Var1 in property file is=${Var1}"
+
 }
 }
