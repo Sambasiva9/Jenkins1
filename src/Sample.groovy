@@ -12,14 +12,10 @@ echo "Service url is : Values inserted in map"+envText.PFDC_EPM_SERVICE_UTL
 
 	echo "Service url is after"
 	
-	Properties props = new Properties();
-props.putAll(map);
-
-	File propsFile = new File('src/constants.properties')
-        propsFile.withInputStream {
-            props.load it
-        }
-        props."$url"
+	def config = new ConfigSlurper('pfdc_epam_service_rul').parse('src/constants.properties')
+	
+println "PRODUCT_NAME: "+config.pfdc_epam_service_rul
+		
 	
 }
 

@@ -50,5 +50,15 @@ def props = readProperties  file:'src/constants.properties'
 def Var1= props['pfdc_epam_service_rul']
 echo "Var1 in property file is=${Var1}"
 
+	Properties props = new Properties();
+props.putAll(map);
+
+	File propsFile = new File('src/constants.properties')
+        propsFile.withInputStream {
+            props.load it
+        }
+        props."$url"
+		
+
 }
 }
