@@ -11,6 +11,8 @@ echo "Service url is : Values inserted in map"+envText.PFDC_EPM_SERVICE_UTL
 
 env.Java_home = tool "${envText.jdkVersion}"
 
+echo sh(returnStdout:true, script: 'env')
+
 
 	echo "Service url is after"
 	
