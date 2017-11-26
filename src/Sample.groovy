@@ -9,14 +9,14 @@ valueMap.put("url", envText.PFDC_EPM_SERVICE_UTL)
 
 echo "Service url is : Values inserted in map"+envText.PFDC_EPM_SERVICE_UTL
 
-env.Java_home = tool "${envText.jdkVersion}"
+//env.Java_home = tool "${envText.jdkVersion}"
 
 
 	echo "Service url is after"
 	
 	//def config = new ConfigSlurper('pfdc_epam_service_rul').parse('src/constants.properties')
 	
-println "PRODUCT_NAME: "+config.pfdc_epam_service_rul
+//println "PRODUCT_NAME: "+config.pfdc_epam_service_rul
 		
 	
 }
